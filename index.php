@@ -18,5 +18,5 @@
 get_header() ?>
 
 	<input type="button" value="123456" class="btn btn-outline-primary"/>
-</body>
-</html>
+<?php
+get_footer();
