@@ -1,0 +1,16 @@
+.site-logo img {
+    max-width: 120px;
+    max-height: 120px;
+}
+
+.site-info {
+    background-color: rgb(244, 244, 244);
+}
+
+.powered-by {
+    text-align: center;
+}
+
+.powered-by a {
+    color: rgb(130,209,249) !important;
+}

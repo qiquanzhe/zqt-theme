@@ -1,0 +1,19 @@
+.nav-link {
+    color: black !important;
+    font-weight: bold;
+}
+
+.active .nav-link {
+    color: rgb(130,209,249) !important;
+}
+
+@media screen and (min-width: 576px) {
+    .nav-link {
+        padding-right: 4rem !important;
+        padding-left: .5em;
+    }
+}
+
+.main {
+    text-align: center;
+}

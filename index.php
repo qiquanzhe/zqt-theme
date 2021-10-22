@@ -17,6 +17,11 @@
 
 get_header() ?>
 
-	<input type="button" value="123456" class="btn btn-outline-primary"/>
+<div class="box">
+	<div class="banner">
+		<img src="<?php bloginfo('template_url'); ?>/img/banner-background.png" alt="banner">
+	</div>
+</div>
+
 <?php
 get_footer();
