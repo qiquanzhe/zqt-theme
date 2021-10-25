@@ -27,6 +27,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style.css" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/footer.css" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/header.css" />
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/font-awesome.min.css"/>
 	
 	<title><?php bloginfo('title'); ?>&nbsp;<?php is_front_page() ? bloginfo('description') : wp_title(); ?></title>
 	<?php wp_head(); ?>

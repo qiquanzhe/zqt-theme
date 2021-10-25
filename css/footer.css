@@ -1,14 +1,28 @@
-.site-logo img {
-    max-width: 120px;
-    max-height: 120px;
-}
-
 .site-info {
     background-color: rgb(244, 244, 244);
 }
 
-.powered-by {
+.links h5 {
+    font-weight: bold;
     text-align: center;
+}
+
+.link-title, .site-logo {
+    font-weight: bold;
+}
+
+.logo-img {
+    display: inline-block;
+}
+
+.logo-img img {
+    max-width: 120px;
+    max-height: 120px;
+}
+
+.powered-by {
+    margin-top: 20px;
+    margin-bottom: 60px;
 }
 
 .powered-by a {
