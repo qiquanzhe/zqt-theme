@@ -6,96 +6,237 @@ Version:1.0
 Author:Zhu Jiehua
 AuthorURI:https://gitee.com/qiquanzhe
 Tags:private;self-developed
+
+主样式文件，包含主题的信息，所有主题都需要这个文件。
 */
 
-@charset"utf-8";
+@charset "utf-8";
 
 a {
-    text-decoration:none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
-a, address, b, big, blockquote, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, label, legend, li, ol, p, pre, small, span, strong, u, ul, var {
-    margin: 0;
-    padding: 0;
-    font-family: Tahoma, Arial, sans-serif;
+a,
+address,
+b,
+big,
+blockquote,
+body,
+center,
+cite,
+code,
+dd,
+del,
+div,
+dl,
+dt,
+em,
+fieldset,
+font,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+i,
+iframe,
+img,
+ins,
+label,
+legend,
+li,
+ol,
+p,
+pre,
+small,
+span,
+strong,
+u,
+ul,
+var {
+  margin: 0;
+  padding: 0;
+  font-family: Tahoma, Arial, sans-serif;
 }
 
 .banner {
-    position: relative;
-    text-align: center;
+  position: relative;
+  text-align: center;
 }
 
-/* .banner img {
-    width: 100%;
-} */
+/* 移动端 */
+@media (max-width: 576px) {
+  .slogan h1 {
+    font-weight: bolder !important;
+    -webkit-text-stroke: 1px steelblue;
+    font-size: 1.8rem !important;
+  }
 
-.slogan {
+  .slogan {
     color: white;
     position: absolute;
-    left:26%;
-    top:25%;
-}
+    left: 8%;
+    top: 30%;
+  }
 
-.slogan h1 {
-    font-weight: bold !important;
-    -webkit-text-stroke: 1px steelblue;
-}
-
-.slogan hr {
+  .slogan hr {
     border-color: rgba(255, 255, 255, 1);
-}
+    display: none;
+  }
 
-.searchbox input {
-    height: 60px;
-    border-radius: 10px;
-}
+  .searchbox input {
+    height: 40px;
+    border-radius: 5px;
+  }
 
-.searchbox input[text]:focus {
-    border-color: #5bc0de!important;
-}
+  .searchbox input[text]:focus {
+    border-color: #5bc0de !important;
+  }
 
-.searchbox input[button] {
+  .searchbox input[button] {
     color: white;
     font-size: 0.5em;
-}
+  }
 
-.divide-title h2 {
+  .divide-title h2 {
     font-weight: bold;
-    font-size: 2.2rem;
-}
+    font-size: 1.6rem;
+  }
 
-.divide-title hr {
-    background-color: rgb(91,192,222);
-    margin: 30px 42%;
-}
+  .divide-title hr {
+    background-color: rgb(91, 192, 222);
+    margin: 5px auto;
+    width: 80%;
+    /* display: none; */
+  }
 
-.news-title h3 {
-    font-weight: bold;
-}
+  .imp > div {
+    display: inline-block;
+  }
 
-.imp-detail {
-    padding: 0 0;
-}
+  .imp-detail {
+    padding-bottom: 30%;
+  }
 
-.imp-detail img {
-    width: 100%
-}
+  .imp-detail h3 {
+    font-size: 1.1rem;
+  }
 
-.imp-detail p {
-    padding: 10%;
+  .imp-detail img {
+    width: 100%;
+  }
+
+  .imp-detail p {
+    padding: 2%;
     text-align: left;
-}
+    font-size: small;
+  }
 
-.footer-slogan {
+  .footer-slogan {
     color: white;
     position: absolute;
-    left:26%;
-    top:40%;
+    left: 3%;
+    top: 40%;
+  }
+
+  .footer-slogan h1 {
+    font-weight: bold !important;
+    /* -webkit-text-stroke: 1px steelblue; */
+    margin-bottom: 2%;
+    font-size:medium;
+  }
 }
 
-.footer-slogan h1 {
+/* PC端 */
+
+@media (min-width: 1200px) {
+  .slogan h1 {
+    font-weight: bold !important;
+    -webkit-text-stroke: 1px steelblue;
+    font-size: 5rem !important;
+  }
+
+  .slogan {
+    color: white;
+    position: absolute;
+    left: 26%;
+    top: 25%;
+  }
+
+  .slogan hr {
+    border-color: rgba(255, 255, 255, 1);
+  }
+  .searchbox input {
+    height: 60px;
+    border-radius: 10px;
+  }
+
+  .searchbox input[text]:focus {
+    border-color: #5bc0de !important;
+  }
+
+  .searchbox input[button] {
+    color: white;
+    font-size: 0.5em;
+  }
+  .divide-title h2 {
+    font-weight: bold;
+    font-size: 2.2rem;
+  }
+
+  .divide-title hr {
+    background-color: rgb(91, 192, 222);
+    margin: 30px 42%;
+    width: 15%;
+  }
+
+  .imp > div {
+    border: black;
+  }
+
+  .imp-detail {
+    padding: 0 0;
+  }
+
+  .imp-detail img {
+    width: 100%;
+  }
+
+  .imp-detail p {
+    padding: 10%;
+    text-align: left;
+  }
+
+  .footer-slogan {
+    color: white;
+    position: absolute;
+    left: 26%;
+    top: 40%;
+  }
+
+  .footer-slogan h1 {
     font-weight: bold !important;
     /* -webkit-text-stroke: 1px steelblue; */
     margin-bottom: 5%;
+  }
+}
+
+.news-title h3 {
+  font-weight: bold;
+}
+
+.date-span {
+  vertical-align: middle;
+}
+
+.title-span {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
 }

@@ -4,12 +4,8 @@
  * The header.
  *
  * This is the template that displays all of the <head> section and everything up until main.
- *
- * @link 
- *
- * @package WordPress
- * @subpackage zqt
- * @since zqt 1.0
+ * 
+ * 网站页头模板文件，通常包含您网站的文档类型、元信息、样式表、脚本链接以及其他数据。
  */
 
 ?>
@@ -27,9 +23,9 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style.css" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/footer.css" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/header.css" />
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/font-awesome.min.css"/>
-	
-	<title><?php bloginfo('title'); ?>&nbsp;<?php is_front_page() ? bloginfo('description') : wp_title(); ?></title>
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/font-awesome.min.css" />
+
+	<title><?php (is_front_page() ? bloginfo('description') : wp_title('')); ?> <?php bloginfo('title'); ?> </title>
 	<?php wp_head(); ?>
 </head>
 
@@ -38,20 +34,22 @@
 	<div id="page" class="page">
 		<div class="header">
 			<nav class="navbar navbar-expand-sm col-md-8 m-auto">
-				<a href="<?php bloginfo('url'); ?>" class="navbar-brand">
-					<img src="<?php bloginfo('template_url'); ?>/img/logo.png" alt="logo">
-				</a>
+				<div class="logo">
+					<a href="<?php bloginfo('url'); ?>" class="navbar-brand">
+						<img src="<?php bloginfo('template_url'); ?>/img/logo.png" alt="logo">
+					</a>
+				</div>
 				<?php
-					wp_nav_menu(array(
-						'theme_location'  => 'primary',
-						'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
-						'container'       => 'div',
-						'container_class' => 'collapse navbar-collapse justify-content-end',
-						'container_id'    => 'bs-example-navbar-collapse-1',
-						'menu_class'      => 'navbar-nav',
-						'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-						'walker'          => new WP_Bootstrap_Navwalker(),
-					));
+				wp_nav_menu(array(
+					'theme_location'  => 'primary',
+					'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
+					'container'       => 'div',
+					'container_class' => 'collapse navbar-collapse justify-content-end',
+					'container_id'    => 'bs-example-navbar-collapse-1',
+					'menu_class'      => 'navbar-nav',
+					'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+					'walker'          => new WP_Bootstrap_Navwalker(),
+				));
 				?>
 			</nav>
 		</div>
