@@ -23,17 +23,19 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style.css" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/footer.css" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/header.css" />
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/services.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
 
 	<title><?php (is_front_page() ? bloginfo('description') : wp_title('')); ?> <?php bloginfo('title'); ?> </title>
 	<?php wp_head(); ?>
+
 </head>
 
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 	<div id="page" class="page">
 		<div class="header">
-			<nav class="navbar navbar-expand-sm col-md-8 m-auto">
+			<nav class="navbar navbar-expand-sm col-md-8 m-auto" id="nav">
 				<div class="logo">
 					<a href="<?php bloginfo('url'); ?>" class="navbar-brand">
 						<img src="<?php bloginfo('template_url'); ?>/img/logo.png" alt="logo">

@@ -8,6 +8,7 @@
  get_header(); ?>
 <div>category.php
     <?php single_cat_title();?>
+    <?php echo $cat?>
 </div>
 <div>
 </div>

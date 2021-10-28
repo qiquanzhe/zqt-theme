@@ -12,7 +12,7 @@
 </div><!-- #content -->
 
 <footer id="footer" class="site-footer">
-	<div class="site-info row">
+	<div class="site-info mx-md-0 row">
 		<div class="links col-md-8 col-12 m-auto row py-5">
 			<div class="col-md-3 col-6">
 				<h5>政府链接</h5>
