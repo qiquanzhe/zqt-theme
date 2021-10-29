@@ -1,50 +1,103 @@
 .cat-title {
-    width: 100%;
-    height: 34px;
-    border-bottom: 1px solid #e0e2e3;
+  width: 100%;
+  height: 34px;
+  border-bottom: 1px solid #e0e2e3;
 }
 
 .cat-title div {
-    width: 83px;
-    height: 34px;
-    line-height: 34px;
-    border-bottom: 2px solid #0088dc;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #2161ab;
-    text-align: center;
+  width: 83px;
+  height: 34px;
+  line-height: 34px;
+  border-bottom: 2px solid #0088dc;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2161ab;
+  text-align: center;
 }
 
 .serv-cat li {
-    list-style-type:none;
+  list-style-type: none;
 }
 
 .serv-cat li a {
-    /* list-style-type:none; */
-    font-size: 17px;
-    color: #345b88;
-    width: 100%;
-    height: 52px;
-    line-height: 52px;
-    display: block;
-    border: 1px solid #e0e2e3;
-    font-weight: normal;
+  /* list-style-type:none; */
+  font-size: 17px;
+  color: #345b88;
+  width: 100%;
+  height: 52px;
+  line-height: 52px;
+  display: block;
+  border: 1px solid #e0e2e3;
+  font-weight: normal;
 }
 
 .serv-cat .active {
-    background-color: #5281da;
-    color: white;
-    /* list-style-type:none; */
-    font-size: 17px;
-    /* color: #345b88; */
-    width: 100%;
-    height: 52px;
-    line-height: 52px;
-    display: block;
-    border: 1px solid #e0e2e3;
+  background-color: #5281da;
+  color: white;
+  /* list-style-type:none; */
+  font-size: 17px;
+  /* color: #345b88; */
+  width: 100%;
+  height: 52px;
+  line-height: 52px;
+  display: block;
+  border: 1px solid #e0e2e3;
 }
 
 .serv-cat li i {
-    font-size: 20px;
-    /* margin-right: 10px; */
+  font-size: 20px;
+  /* margin-right: 10px; */
+}
+
+.exampled-div {
+  display: none;
+}
+
+.services-card {
+  border: none;
+}
+
+.services-header {
+  background-color: #fff;
+}
+
+.services-header a {
+  display: block;
+  width: 100%;
+  font-size: 1.4rem;
+  color: #345b88;
+  text-align: left;
+}
+.services-header a:hover {
+  border: 1px solid transparent;
+}
+.services-header a:focus {
+  outline: 0;
+  box-shadow: none;
+  background-color: #5281da;
+  color: white;
+}
+
+.page_navi {
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  overflow: hidden;
+  padding-top: 1em;
+}
+
+.page_navi a {
+  padding: 3px 8px;
+  margin: 2px;
+  text-decoration: none;
+  color: #888;
+  border: 1px solid #ccf;
+}
+
+.page_navi a:hover,
+.page_navi a.current {
+  border: 1px solid #356aa0;
+  color: #356aa0;
+  font-weight: bolder;
 }
