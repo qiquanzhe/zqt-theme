@@ -130,11 +130,6 @@ get_header(); ?>
                     endwhile;
                 }
                 ?>
-                <?php
-                $paged = get_query_var('paged');
-                if ($paged > 1)
-                    printf('– 第 %s 页 ', $paged);
-                ?>
             </div>
         </div>
     </div>
