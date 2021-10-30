@@ -5,9 +5,6 @@
  * 分类目录存档模板文件。
  *  
  */
-
-get_header(); ?>
-<?php
 if (in_category('2') || post_is_in_descendant_category(2)) {
     include(TEMPLATEPATH . '/category-services.php');
 } elseif (in_category('4') || post_is_in_descendant_category(4)) {
@@ -21,7 +18,3 @@ if (in_category('2') || post_is_in_descendant_category(2)) {
 } else {
     include(TEMPLATEPATH . '/category-other.php');
 }
-
-?>
- <?php
-    get_footer();

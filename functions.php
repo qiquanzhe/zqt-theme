@@ -76,58 +76,58 @@ function post_is_in_descendant_category($cats, $_post = null)
   return false;
 }
 
+function LimitChar($max_char = 200, $more_text = '...', $more_link_text = '', $limit_type = 'content')
+{
+  if ($limit_type == 'title') {
+    $limiter = get_the_title();
+  } else {
+    $limiter = get_the_content();
+  }
+  $limiter = apply_filters('the_content', $limiter);
+  $limiter = strip_tags(str_replace(']]>', ']]>', $limiter));
+  if (strlen($limiter) > $max_char) {
+    $limiter = substr($limiter, 0, $max_char + 1);
+    $limiter = utf8Conver($limiter);
+    echo $limiter;
+    echo $more_text;
+    if ($more_link_text != '') {
+      echo ' <a href="';
+      echo the_permalink();
+      echo '">' . $more_link_text . '</a>';
+    }
+  } else {
+    echo $limiter;
+  }
+}
+
+function utf8Conver($str)
+{
+  $len = strlen($str);
+  $hex = null;
+  for ($i = strlen($str) - 1; $i >= 0; $i -= 1) {
+    $hex .= ' ' . ord($str[$i]);
+    $ch = ord($str[$i]);
+    if (($ch & 128) == 0) return (substr($str, 0, $i));
+    if (($ch & 192) == 192) return (substr($str, 0, $i));
+  }
+  return ($str . $hex);
+}
+
+
 /**
- * 数字分页函数
- * 因为wordpress默认仅仅提供简单分页
- * 所以要实现数字分页，需要自定义函数
- * @Param int $range            数字分页的宽度
- * @Return string|empty        输出分页的HTML代码        
+ * 统计浏览次数
  */
-// function lingfeng_pagenavi($range = 4)
-// {
-//   global $paged, $wp_query;
-//   $max_page = $wp_query->max_num_pages;
-//   if ($max_page > 1) {
-//     echo "<div class='fenye'>";
-//     if (!$paged) {
-//       $paged = 1;
-//     }
-//     if ($paged != 1) {
-//       echo "<a href='" . get_pagenum_link(1) . "' class='extend' title='跳转到首页'>首页</a>";
-//     }
-//     previous_posts_link('上一页');
-//     if ($max_page > $range) {
-//       if ($paged < $range) {
-//         for ($i = 1; $i <= ($range + 1); $i++) {
-//           echo "<a href='" . get_pagenum_link($i) . "'";
-//           if ($i == $paged) echo " class='current'";
-//           echo ">$i</a>";
-//         }
-//       } elseif ($paged >= ($max_page - ceil(($range / 2)))) {
-//         for ($i = $max_page - $range; $i <= $max_page; $i++) {
-//           echo "<a href='" . get_pagenum_link($i) . "'";
-//           if ($i == $paged) echo " class='current'";
-//           echo ">$i</a>";
-//         }
-//       } elseif ($paged >= $range && $paged < ($max_page - ceil(($range / 2)))) {
-//         for ($i = ($paged - ceil($range / 2)); $i <= ($paged + ceil(($range / 2))); $i++) {
-//           echo "<a href='" . get_pagenum_link($i) . "'";
-//           if ($i == $paged) echo " class='current'";
-//           echo ">$i</a>";
-//         }
-//       }
-//     } else {
-//       for ($i = 1; $i <= $max_page; $i++) {
-//         echo "<a href='" . get_pagenum_link($i) . "'";
-//         if ($i == $paged) echo " class='current'";
-//         echo ">$i</a>";
-//       }
-//     }
-//     next_posts_link('下一页');
-//     if ($paged != $max_page) {
-//       echo "<a href='" . get_pagenum_link($max_page) . "' class='extend' title='跳转到最后一页'>尾页</a>";
-//     }
-//     echo '<span>共[' . $max_page . ']页</span>';
-//     echo "</div>\n";
-//   }
-// }
+function wpmee_post_views($before = '(浏览 ', $after = ' 次)', $echo = 1)
+{
+  global $post;
+  $post_ID = $post->ID;
+  $views = (int)get_post_meta($post_ID, 'views', true);
+  if ($echo) echo $before, number_format($views), $after;
+  else return $views;
+}
+
+//保护后台登录
+add_action('login_enqueue_scripts','login_protection');
+function login_protection(){  
+    if($_GET['word'] != 'zqtytzq')header('Location: http://www.baidu.com/');  
+}

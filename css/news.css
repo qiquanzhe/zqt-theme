@@ -1,8 +1,32 @@
 .news-list li {
     border-bottom: 1px dashed rgb(218, 218, 218);
+    height: 45px;
 }
 
-.news-list li span {
+.news-list span {
     display: inline-block;
     text-align: right;
+    line-height: 45px;
+}
+
+.news-list .news-tag {
+    color: tomato;
+}
+.news-list .news-title {
+    white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.news-list li a{
+    display: inline-block;
+    line-height: 45px;
+}
+
+.wp_pagenavi .current{
+    border: none;
+    background-color: rgb(82, 129, 218);
+    color: white;
 }

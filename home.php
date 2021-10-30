@@ -16,7 +16,7 @@ get_header() ?>
 	</div>
 
 	<div class="container my-5">
-		<div class="searchbox row">
+		<div class="searchbox row" style="display: none;">
 			<input class="col-md-6 col-8 offset-md-2 offset-1 border border-info border-3" type="text" name="search-content" id="search" placeholder="请输入搜索内容">
 			<input class="col-md-3 col-2 mx-md-4 mx-2 btn btn-info border border-info border-3" type="button" value="搜索">
 		</div>
@@ -36,20 +36,32 @@ get_header() ?>
 					<li class="row">
 						<a href="<?php the_permalink() ?>" title="<?php the_title() ?>">
 							<span class="col-md-3 col-3 mx-md-4 mx-2 date-span"><?php the_time('Y-n-d'); ?></span>
-							<span class="title-span col-8 col-md-9"><?php the_title(); ?>这里有最新通告这里有最新通告这里有最新通告这里有最新通告这里有最新通告这里有最新通告这里有最新通告这里有最新通告</span>
+							<span class="title-span col-8 col-md-9"><?php the_title(); ?></span>
 						</a>
 					</li>
 				<?php
 				endwhile;
+				wp_reset_query();
 				?>
 			</div>
 			<div class="brief col-md-6 col-12">
 				<h3 class="text-primary mx-3 my-md-0 my-3 text-center">热点动态</h3>
 				<hr>
-				这里是日期&nbsp;&nbsp;&nbsp;这里有热点动态这里有热点动态这里有热点动态这里有热点动态
+				<?php
+				query_posts('showposts=8&cat=10');
+				while (have_posts()) : the_post(); ?>
+					<li class="row">
+						<a href="<?php the_permalink() ?>" title="<?php the_title() ?>">
+							<span class="col-md-3 col-3 mx-md-4 mx-2 date-span"><?php the_time('Y-n-d'); ?></span>
+							<span class="title-span col-8 col-md-9"><?php the_title(); ?></span>
+						</a>
+					</li>
+				<?php
+				endwhile;
+				wp_reset_query();
+				?>
 			</div>
 		</div>
-
 		<div class="row yewu my-md-5 my-3">
 			<img class="col-md-3 col-3" src="<?php bloginfo('template_url') ?>/img/ctp.png" alt="高新技术企业认定" />
 			<img class="col-md-3 col-3" src="<?php bloginfo('template_url') ?>/img/ipdaili.png" alt="知识产权代理" />

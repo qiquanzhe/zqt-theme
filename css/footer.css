@@ -12,6 +12,10 @@
     font-weight: bold;
 }
 
+.link li {
+    margin: 3% auto;
+}
+
 .logo-img {
     display: inline-block;
 }

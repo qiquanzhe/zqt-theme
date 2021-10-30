@@ -1,0 +1,39 @@
+.prev a {
+  color: rgb(0, 140, 186);
+}
+
+.next a {
+  color: rgb(0, 140, 186);
+}
+
+.article-card {
+  box-shadow: 2px 2px 5px rgba(204, 203, 203, 0.6);
+}
+
+.article-title {
+  width: 100%;
+  display: block;
+  line-height: 2.5rem;
+  font-size: 26px;
+  height: 50px;
+  border-bottom: #343434 solid 2px;
+}
+
+.article-info span {
+    color: rgb(131, 131, 131);
+    font-size: 0.9rem;
+}
+
+.article-content .content {
+    font-size: 16px;
+    line-height: 2em;
+    color:rgb(105, 105, 105)
+}
+
+.article-content .content p {
+    text-indent: 2em;
+}
+
+.article-content .content>p:first-child {
+    text-indent: 0 !important;
+}

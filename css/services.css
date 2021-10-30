@@ -49,6 +49,10 @@
   /* margin-right: 10px; */
 }
 
+#accordion {
+  display: block;
+}
+
 .exampled-div {
   display: none;
 }

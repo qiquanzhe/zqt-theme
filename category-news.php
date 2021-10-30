@@ -33,40 +33,71 @@ get_header(); ?>
                 }
                 ?>
             </ul>
-        <div class="col-md-9">
-            <?php
-            if ($cat == 4) {
-                # code...
-            } else {
-                echo get_query_var('paged');
-                $limit = get_option('posts_per_page');
-                $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                query_posts('orderby=date&showposts=' . $limit=10 . '&paged=' . $paged.'&cat=' . $cat);
-                echo $paged;
-            ?>
-                <ul class="news-list">
+            <div class="col-md-9">
                 <?php
-                while (have_posts()) {
-                    the_post();
-                    ?>
-                    <li class="row">
-                        <a href="<?php get_permalink(); ?>" title="<?php the_title(); ?>" class="news-title col-md-10"><?php the_title(); ?></a>
-                        <span class="col-md-2 text-right"><?php the_time('Y-m-d') ?></span>
-                    </li>
-                    <?php
-                }
-            }
+                if ($cat == 4) {
+                    $tag = get_term_by('slug', 'top-article', 'post_tag');
+                    if ($tag) {
+                        $limit = get_option('posts_per_page');
+                        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                        query_posts('orderby=date&showposts=' . $limit = 20 . '&paged=' . $paged . '&tag_id=' . $tag->term_id);
+                        // query_posts('showposts=-1&tag_id=' . $tag->term_id);
                 ?>
-                </ul>
-                
-                <?php the_posts_pagination(); ?>
+                        <ul class="news-list my-md-4">
+                            <?php
+                            while (have_posts()) {
+                                the_post();
+                            ?>
+                                <li class="row">
+                                    <?php
+                                    $tags = wp_get_post_tags($post->ID);
+                                    foreach ($tags as $tag) {
+                                        echo '<span class="col-md-2 text-center news-tag">[' . $tag->name . ']</span>';
+                                    }
+                                    ?>
+                                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="col-md-8"><?php the_title(); ?></a>
+                                    <span class="col-md-2 text-right news-date"><?php the_time('Y-m-d') ?></span>
+                                </li>
+                        <?php
+                            }
+                            wp_reset_query();
+                        }
+                        ?>
+                        </ul>
+                    <?php
+                } else {
+                    $limit = get_option('posts_per_page');
+                    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                    query_posts('orderby=date&showposts=' . $limit = 20 . '&paged=' . $paged . '&cat=' . $cat);
+                    ?>
+                        <ul class="news-list my-md-4">
+                            <?php
+                            while (have_posts()) {
+                                the_post();
+                            ?>
+                                <li class="row">
+                                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="news-title col-md-9 mx-md-1"><?php the_title(); ?></a>
+                                    <span class="col-md-2 text-right news-date"><?php the_time('Y-m-d') ?></span>
+                                </li>
+                        <?php
+                            }
+                            wp_reset_query();
+                        }
+                        ?>
+                        </ul>
+
+                        <?php wp_pagenavi(); ?>
+                        <!-- 
+                    <div class="wp-pagenavi" role="navigation">
+                        <span class="pages"> 1 / 2 </span>
+                        <span aria-current="page" class="current">1</span>
+                        <a class="page larger" title="第 2 页" href="http://192.168.1.125/wordpress/news/notify/page/2">2</a>
+                        <a class="nextpostslink" rel="next" aria-label="Next Page" href="http://192.168.1.125/wordpress/news/notify/page/2">下一页</a>
+                    </div>
+                     -->
+            </div>
         </div>
     </div>
-</div>
-</div>
-<div>category.php - 新闻通知
-    <?php single_cat_title(); ?>
-    <?php echo $cat ?>
 </div>
 <?php
 get_footer();

@@ -1,0 +1,59 @@
+.box-header {
+    border-bottom: 1px solid rgba(185, 181, 181, .4);
+    height: 40px;
+}
+
+.box-header a {
+    color: #5281da;
+    display: inline-block;
+    line-height: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+}
+
+.box-header span {
+    color: #5281da;
+    display: inline-block;
+    line-height: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+}
+
+.box-header ul {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.box-header .active {
+    border-bottom: 5px solid #5281da;
+}
+
+.disc {
+    flex: auto;
+}
+
+.disc-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.disc-img img {
+    width: 100%;
+    height: auto;
+}
+
+.desc-container .card {
+    box-shadow: 1px 1px 1px rgba(126, 126, 126, 0.8);
+}
+
+.desc-container .card:hover {
+    box-shadow: 2px 2px 3px rgba(126, 126, 126, 0.8);
+}
+
+.desc-container a {
+    display: block;
+}
+
+.desc-container p {
+    color: rgba(126, 126, 126, 0.8);
+}

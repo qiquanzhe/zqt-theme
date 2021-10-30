@@ -17,28 +17,28 @@
 			<div class="col-md-3 col-6">
 				<h5>政府链接</h5>
 				<ul class="link list-unstyled text-center my-4">
-					<li><a href="#">正企通</a></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li><a href="https://www.miit.gov.cn/">工业和信息化部</a></li>
+					<li><a href="http://www.chinatorch.gov.cn/">科技部火炬中心</a></li>
+					<li><a href="http://gxt.shandong.gov.cn/">山东省工业和信息化厅</a></li>
+					<li><a href="http://kjt.shandong.gov.cn/">山东省科学技术厅</a></li>
+					<li><a href="http://jnjxw.jinan.gov.cn/">济南市工业和信息化局</a></li>
+					<li><a href="http://jnsti.jinan.gov.cn/">济南市科学技术局</a></li>
 				</ul>
 			</div>
 			<div class="col-md-3 col-6">
 				<h5>友情链接</h5>
 				<ul class="link list-unstyled text-center my-4">
-					<li><a href="#">正企通</a></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li><a href="http://www.51cqc.com" target="_blank">宁夏ISO质量体系认证</a></li>
+					<li><a href="http://www.nxzlcw.com" target="_blank">银川商标注册</a></li>
+					<li><a href="http://www.sjzdengnuo.com" target="_blank">资质代办</a></li>
+					<li><a href="https://www.mustip.com" target="_blank">知识产权申请</a></li>
+					<li><a href="http://www.czcnhq.com" target="_blank">DWS系统</a></li>
 				</ul>
 			</div>
 			<div class="site-name col-md-6 col-12">
 				<div class="link-title text-center">
-					<h5>网站地图 | 关于我们 </h5>
+					<h5>网站地图 | 
+						<a href="<?php bloginfo('url'); ?>/about">关于我们</a> </h5>
 				</div>
 				<div class="text-center my-4">
 					<div class="address">地址：济南市槐荫区经十路22799号和谐广场2号楼2105室</div>
@@ -55,15 +55,11 @@
 	</div><!-- .site-info -->
 	<div class="powered-by text-center">
 		<div>
-			主体备案号：XXXXXXXXXXXXXXXXXX
+		Copyright ©山东政商信息科技有限公司版权所有
 		</div>
-		<?php
-		printf(
-			/* translators: %s: WordPress. */
-			esc_html__('Proudly powered by %s.', 'zqt'),
-			'<a href="' . esc_url(__('http://localhost/wordpress/', 'zqt')) . '">正企通</a>'
-		);
-		?>
+		<div><a href="http://beian.miit.gov.cn/">备案号：鲁ICP备19054652号-1</a></div>
+		<div>Proudly powered by <a href="<?php bloginfo('url'); ?>">正企通</a></div>
+		
 	</div><!-- .powered-by -->
 </footer><!-- #colophon -->
 
