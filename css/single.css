@@ -41,3 +41,7 @@
 	max-width: 100%;
 	height: auto;
 }
+
+.article-content a {
+  color: rgb(0, 140, 186);
+}

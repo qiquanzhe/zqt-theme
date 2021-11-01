@@ -31,7 +31,6 @@ get_header(); ?>
     </div>
 </div>
 <script>
-    // var map = new AMap.Map("map-container");
     var map = new AMap.Map('map-container', {
         zoom: 17, //级别
         center: [116.977103, 36.649312], //中心点坐标
