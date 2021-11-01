@@ -16,6 +16,7 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="Description" content="<?php bloginfo('description'); ?>" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
 	<!-- Bootstrap Core CSS -->
 	<!-- https://bootswatch.com/superhero/ -->
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css" />
@@ -26,9 +27,11 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/news.css" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/about.css" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/single.css" />
-
-
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/contact.css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+
+	<script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=gcRhCEw5OGaQ3Oys91eg2Edh257Bxoq3"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/baidu-map.js"></script>
 
 	<?php $blog_title = get_bloginfo('name'); ?>
 	<title><?php (is_home() ? $blog_title : wp_title('')); ?> <?php bloginfo('title'); ?> </title>

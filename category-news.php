@@ -85,11 +85,11 @@ get_header(); ?>
                         <?php
                             }
                             wp_reset_query();
+
+                             wp_pagenavi(); 
                         }
                         ?>
                         </ul>
-
-                        <?php wp_pagenavi(); ?>
                         <!-- 
                     <div class="wp-pagenavi" role="navigation">
                         <span class="pages"> 1 / 2 </span>
