@@ -13,9 +13,6 @@ get_header(); ?>
         <img class="img-fluid" src="<?php bloginfo('template_url'); ?>/img/banner-news.png" alt="banner">
     </div>
     <div class="container">
-		<div class="breadcrumbs text-end">
-			<?php if( function_exists( 'aioseo_breadcrumbs' ) ) aioseo_breadcrumbs(); ?>
-			</div>
         <div class="cat-title my-md-3">
             <div>
                 <?php single_cat_title(); ?>
