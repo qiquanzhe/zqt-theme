@@ -28,11 +28,8 @@
 			<div class="col-md-3 col-6">
 				<h5>友情链接</h5>
 				<ul class="link list-unstyled text-center my-4">
-					<li><a href="http://www.51cqc.com" target="_blank">宁夏ISO质量体系认证</a></li>
 					<li><a href="http://www.nxzlcw.com" target="_blank">银川商标注册</a></li>
-					<li><a href="http://www.sjzdengnuo.com" target="_blank">资质代办</a></li>
 					<li><a href="https://www.mustip.com" target="_blank">知识产权申请</a></li>
-					<li><a href="http://www.czcnhq.com" target="_blank">DWS系统</a></li>
 				</ul>
 			</div>
 			<div class="site-name col-md-6 col-12">
