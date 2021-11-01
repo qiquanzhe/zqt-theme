@@ -15,7 +15,6 @@
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="Description" content="<?php bloginfo('description'); ?>" />
 	<!-- Bootstrap Core CSS -->
 	<!-- https://bootswatch.com/superhero/ -->
@@ -31,7 +30,8 @@
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
 
-	<title><?php (is_front_page() ? bloginfo('description') : wp_title('')); ?> <?php bloginfo('title'); ?> </title>
+	<?php $blog_title = get_bloginfo('name'); ?>
+	<title><?php (is_home() ? $blog_title : wp_title('')); ?> <?php bloginfo('title'); ?> </title>
 	<?php wp_head(); ?>
 
 </head>

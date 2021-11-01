@@ -9,6 +9,9 @@ get_header(); ?>
         <img class="img-fluid" src="<?php bloginfo('template_url'); ?>/img/banner-about.png" alt="banner">
     </div>
     <div class="container">
+		<div class="breadcrumbs text-end">
+			<?php if( function_exists( 'aioseo_breadcrumbs' ) ) aioseo_breadcrumbs(); ?>
+			</div>
         <div class="box-header text-center my-md-4">
             <!-- Nav tabs -->
             <ul class="nav nav-tabs" role="tablist">
