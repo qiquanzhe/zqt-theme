@@ -10,7 +10,7 @@ get_header(); ?>
         <img class="img-fluid" src="<?php bloginfo('template_url'); ?>/img/banner-contact.png" alt="banner">
     </div>
     <div class="container">
-        <div class="map-container" id="map-container">
+        <div class="map-container my-md-4" id="map-container">
 
         </div>
         <?php the_content(); ?>
@@ -20,8 +20,11 @@ get_header(); ?>
     var map = new BMap.Map("map-container"); 
 var point = new BMap.Point(116.983614,36.655468); 
 map.centerAndZoom(point, 15);  
+map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+var marker1 = new BMap.Marker(new BMap.Point(116.404, 39.925));
+map.addOverlay(marker1);
 window.setTimeout(function(){  
-    map.panTo(new BMap.Point(116.409, 39.918));    
+    map.panTo(new BMap.Point(116.983614,36.655468));    
 }, 2000);
 </script>
 <?php
