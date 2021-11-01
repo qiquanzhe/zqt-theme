@@ -31,7 +31,7 @@
 	<!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
 
-	<script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=gcRhCEw5OGaQ3Oys91eg2Edh257Bxoq3&s=1"></script>
+	<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=25a07399eaf117b5841092df9163a3ca"></script> 
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/baidu-map.js"></script>
 
 	<?php $blog_title = get_bloginfo('name'); ?>
