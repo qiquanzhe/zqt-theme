@@ -49,12 +49,7 @@ get_header(); ?>
                                 the_post();
                             ?>
                                 <li class="row">
-                                    <?php
-                                    $tags = wp_get_post_tags($post->ID);
-                                    foreach ($tags as $tag) {
-                                        echo '<span class="col-md-2 text-center news-tag">[' . $tag->name . ']</span>';
-                                    }
-                                    ?>
+                                    <span class="col-md-2 text-center news-tag">热门文章</span>
                                     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="col-md-8"><?php the_title(); ?></a>
                                     <span class="col-md-2 text-right news-date"><?php the_time('Y-m-d') ?></span>
                                 </li>
