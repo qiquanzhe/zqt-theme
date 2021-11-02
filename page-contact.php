@@ -39,10 +39,10 @@ get_header(); ?>
     var marker = new AMap.Marker({
         position: [116.977103, 36.649312] //位置
     })
-    marker.setTitle('山东政商信息科技有限公司')
+    marker.setTitle('正企通（山东）企业发展集团有限公司')
     marker.setLabel({
         offset: new AMap.Pixel(10, 10), //设置文本标注偏移量
-        content: "<div class='map-info'>山东政商信息科技有限公司</div>", //设置文本标注内容
+        content: "<div class='map-info'>正企通（山东）企业发展集团有限公司</div>", //设置文本标注内容
         direction: 'top' //设置文本标注方位
     });
     map.add(marker); //添加到地图

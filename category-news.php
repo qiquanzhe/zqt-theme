@@ -41,7 +41,6 @@ get_header(); ?>
                         $limit = get_option('posts_per_page');
                         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                         query_posts('orderby=date&showposts=' . $limit = 20 . '&paged=' . $paged . '&tag_id=' . $tag->term_id);
-                        // query_posts('showposts=-1&tag_id=' . $tag->term_id);
                 ?>
                         <ul class="news-list my-md-4">
                             <?php
@@ -77,19 +76,10 @@ get_header(); ?>
                         <?php
                             }
                             wp_reset_query();
-
-                             wp_pagenavi(); 
+                            wp_pagenavi(); 
                         }
                         ?>
                         </ul>
-                        <!-- 
-                    <div class="wp-pagenavi" role="navigation">
-                        <span class="pages"> 1 / 2 </span>
-                        <span aria-current="page" class="current">1</span>
-                        <a class="page larger" title="第 2 页" href="http://192.168.1.125/wordpress/news/notify/page/2">2</a>
-                        <a class="nextpostslink" rel="next" aria-label="Next Page" href="http://192.168.1.125/wordpress/news/notify/page/2">下一页</a>
-                    </div>
-                     -->
             </div>
         </div>
     </div>
