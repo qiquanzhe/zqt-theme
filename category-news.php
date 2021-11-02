@@ -35,34 +35,18 @@ get_header(); ?>
             </ul>
             <div class="col-md-9">
                 <?php
-                if ($cat == 4) {
-                    $tag = get_term_by('slug', 'top-article', 'post_tag');
-                    if ($tag) {
-                        $limit = get_option('posts_per_page');
-                        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                        query_posts('orderby=date&showposts=' . $limit = 20 . '&paged=' . $paged . '&tag_id=' . $tag->term_id);
-                ?>
-                        <ul class="news-list my-md-4">
-                            <?php
-                            while (have_posts()) {
-                                the_post();
-                            ?>
-                                <li class="row">
-                                    <span class="col-md-2 text-center news-tag">热门文章</span>
-                                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="col-md-8"><?php the_title(); ?></a>
-                                    <span class="col-md-2 text-right news-date"><?php the_time('Y-m-d') ?></span>
-                                </li>
-                        <?php
-                            }
-                            wp_reset_query();
-                        }
-                        ?>
-                        </ul>
-                    <?php
-                } else {
                     $limit = get_option('posts_per_page');
                     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                    query_posts('orderby=date&showposts=' . $limit = 20 . '&paged=' . $paged . '&cat=' . $cat);
+                    // query_posts('showposts='.$limit = 20. '&paged=' .$paged. '&cat='.$cat)
+                    // query_posts('orderby=ID&order=DESC&showposts=' . $limit = 20 . '&paged=' . $paged . '&cat=' . $cat.'&ignore_sticky_posts=1&post_in='.get_option('sticky_posts'));
+                    $query_post_args = array (
+                        'showposts' => $limit = 20,
+                        'post__in' => get_option('sticky_posts'),
+                        'caller_get_posts' => 1,
+                        'cat' => $cat,
+                        "paged" => $paged
+                    );
+                    query_posts($query_post_args);
                     ?>
                         <ul class="news-list my-md-4">
                             <?php
@@ -70,14 +54,38 @@ get_header(); ?>
                                 the_post();
                             ?>
                                 <li class="row">
-                                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="news-title col-md-9 mx-md-1"><?php the_title(); ?></a>
+                                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="col-md-10">
+                                    <?php if(is_sticky()){echo '<span class="news-tag">[热门文章]</span>';} ?> <?php the_title(); ?></a>
                                     <span class="col-md-2 text-right news-date"><?php the_time('Y-m-d') ?></span>
                                 </li>
                         <?php
                             }
                             wp_reset_query();
+
+                            $query_post_args = array (
+                                'showposts' => $limit = 20,
+                                'cat' => $cat,
+                                "paged" => $paged,
+                                'orderby' => 'ID',
+                                'ignore_sticky_posts' => 1,
+                                'order' => 'DESC'
+                            );
+                            query_posts($query_post_args);
+                            ?>
+                                <ul class="news-list">
+                                    <?php
+                                    while (have_posts()) {
+                                        the_post();
+                                    ?>
+                                        <li class="row">
+                                            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="col-md-10">
+                                            <?php the_title(); ?></a>
+                                            <span class="col-md-2 text-right news-date"><?php the_time('Y-m-d') ?></span>
+                                        </li>
+                                <?php
+                                    }
+                                    wp_reset_query();
                             wp_pagenavi(); 
-                        }
                         ?>
                         </ul>
             </div>

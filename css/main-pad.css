@@ -1,0 +1,475 @@
+/**
+* CSS: pad端样式表 [min-width: 576px] and [max-width: 1200px]
+**/
+
+/* 全局样式 */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a,
+address,
+b,
+big,
+blockquote,
+body,
+center,
+cite,
+code,
+dd,
+del,
+div,
+dl,
+dt,
+em,
+fieldset,
+font,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+i,
+iframe,
+img,
+ins,
+label,
+legend,
+li,
+ol,
+p,
+pre,
+small,
+span,
+strong,
+u,
+ul,
+var {
+  margin: 0;
+  padding: 0;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+/* 页眉样式 */
+
+.header {
+  width: 100%;
+}
+
+#nav {
+  width: 1200px;
+  min-width: 1200px;
+}
+
+.nav-link {
+  color: black !important;
+  font-weight: bold;
+}
+
+.active .nav-link {
+  color: rgb(130,209,249) !important;
+}
+
+.main {
+  text-align: center;
+}
+
+/* 首页样式 */
+.banner {
+  position: relative;
+  text-align: center;
+}
+
+.slogan h1 {
+  font-weight: bolder !important;
+  -webkit-text-stroke: 1px steelblue;
+  font-size: 1.8rem !important;
+}
+
+.slogan {
+  color: white;
+  position: absolute;
+  left: 8%;
+  top: 30%;
+}
+
+.slogan hr {
+  border-color: rgba(255, 255, 255, 1);
+  display: none;
+}
+
+.searchbox input {
+  height: 40px;
+  border-radius: 5px;
+}
+
+.searchbox input[text]:focus {
+  border-color: #5bc0de !important;
+}
+
+.searchbox input[button] {
+  color: white;
+  font-size: 0.5em;
+}
+
+.divide-title h2 {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.divide-title hr {
+  background-color: rgb(91, 192, 222);
+  margin: 5px auto;
+  width: 80%;
+  /* display: none; */
+}
+
+.imp > div {
+  display: inline-block;
+}
+
+.imp-detail {
+  padding-bottom: 30%;
+}
+
+.imp-detail h3 {
+  font-size: 1.1rem;
+}
+
+.imp-detail img {
+  width: 100%;
+}
+
+.imp-detail p {
+  padding: 2%;
+  text-align: left;
+  font-size: small;
+}
+
+.footer-slogan {
+  color: white;
+  position: absolute;
+  left: 3%;
+  top: 40%;
+}
+
+.footer-slogan h1 {
+  font-weight: bold !important;
+  /* -webkit-text-stroke: 1px steelblue; */
+  margin-bottom: 2%;
+  font-size:medium;
+}
+
+.news-title h3 {
+  font-weight: bold;
+}
+
+.date-span {
+  vertical-align: middle;
+}
+
+.title-span {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 1600px) {
+  .slogan h1 {
+    font-weight: bold !important;
+    -webkit-text-stroke: 1px steelblue;
+    font-size: 4rem !important;
+  }
+}
+
+/* 业务范围样式 */
+.cat-title {
+  width: 100%;
+  height: 34px;
+  border-bottom: 1px solid #e0e2e3;
+}
+
+.cat-title div {
+  width: 83px;
+  height: 34px;
+  line-height: 34px;
+  border-bottom: 2px solid #0088dc;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2161ab;
+  text-align: center;
+}
+
+.serv-cat li {
+  list-style-type: none;
+}
+
+.serv-cat li a {
+  /* list-style-type:none; */
+  font-size: 17px;
+  color: #345b88;
+  width: 100%;
+  height: 52px;
+  line-height: 52px;
+  display: block;
+  border: 1px solid #e0e2e3;
+  font-weight: normal;
+}
+
+.serv-cat .active {
+  background-color: #5281da;
+  color: white;
+  /* list-style-type:none; */
+  font-size: 17px;
+  /* color: #345b88; */
+  width: 100%;
+  height: 52px;
+  line-height: 52px;
+  display: block;
+  border: 1px solid #e0e2e3;
+}
+
+.serv-cat li i {
+  font-size: 20px;
+  /* margin-right: 10px; */
+}
+
+#accordion {
+  display: block;
+}
+
+.exampled-div {
+  display: none;
+}
+
+.services-card {
+  border: none;
+}
+
+.services-header {
+  background-color: #fff;
+}
+
+.services-header a {
+  display: block;
+  width: 100%;
+  font-size: 1.4rem;
+  color: #345b88;
+  text-align: left;
+}
+.services-header a:hover {
+  border: 1px solid transparent;
+}
+.services-header a:focus {
+  outline: 0;
+  box-shadow: none;
+  background-color: #5281da;
+  color: white;
+}
+
+/* 新闻通知范围 */
+
+.news-list li {
+  border-bottom: 1px dashed rgb(218, 218, 218);
+  height: 45px;
+}
+
+.news-list span {
+  display: inline-block;
+  text-align: right;
+  line-height: 45px;
+}
+
+.news-list .news-tag {
+  color: tomato;
+}
+.news-list .news-title {
+  white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
+display: inline-block;
+vertical-align: middle;
+}
+
+.news-list li a{
+  display: inline-block;
+  line-height: 45px;
+}
+
+.wp_pagenavi .current{
+  border: none;
+  background-color: rgb(82, 129, 218);
+  color: white;
+}
+
+/* 联系我们样式 */
+.map-container {
+  width:100%;
+  height: 450px;
+}
+
+.contact-infos div {
+  font-size: 20px;
+  margin:20px auto;
+}
+
+.contact-infos div i {
+  float: left;
+  margin-right: 15px;
+}
+
+/* 项目案例样式 */
+
+/* 关于我们样式 */
+
+.box-header {
+  border-bottom: 1px solid rgba(185, 181, 181, .4);
+  height: 40px;
+}
+
+.box-header a {
+  color: #5281da;
+  display: inline-block;
+  line-height: 100%;
+  height: 100%;
+  font-size: 1.2rem;
+}
+
+.box-header span {
+  color: #5281da;
+  display: inline-block;
+  line-height: 100%;
+  height: 100%;
+  font-size: 1.2rem;
+}
+
+.box-header ul {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.box-header .active {
+  border-bottom: 5px solid #5281da;
+}
+
+.disc {
+  flex: auto;
+}
+
+.disc-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.disc-img img {
+  width: 100%;
+  height: auto;
+}
+
+.desc-container .card {
+  box-shadow: 1px 1px 1px rgba(126, 126, 126, 0.8);
+}
+
+.desc-container .card:hover {
+  box-shadow: 2px 2px 3px rgba(126, 126, 126, 0.8);
+}
+
+.desc-container a {
+  display: block;
+}
+
+.desc-container p {
+  color: rgba(126, 126, 126, 0.8);
+}
+
+/* 单页文章样式 */
+.prev a {
+  color: rgb(0, 140, 186);
+}
+
+.next a {
+  color: rgb(0, 140, 186);
+}
+
+.article-card {
+  box-shadow: 2px 2px 5px rgba(204, 203, 203, 0.6);
+}
+
+.article-title {
+  width: 100%;
+  display: block;
+  line-height: 2.5rem;
+  font-size: 26px;
+  border-bottom: #343434 solid 2px;
+}
+
+.article-info span {
+    color: rgb(131, 131, 131);
+    font-size: 0.9rem;
+}
+
+.article-content .content {
+    font-size: 16px;
+    line-height: 2em;
+    color:rgb(105, 105, 105)
+}
+
+.article-content .content p {
+    text-indent: 2em;
+}
+
+.article-content .content>p:first-child {
+    text-indent: 0 !important;
+}
+
+.content img {
+	max-width: 100%;
+	height: auto;
+}
+
+.article-content a {
+  color: rgb(0, 140, 186);
+}
+
+/* 页脚样式 */
+.site-info {
+  background-color: rgb(244, 244, 244);
+  width: 100%;
+}
+
+.links h5 {
+  font-weight: bold;
+  text-align: center;
+}
+
+.link-title, .site-logo {
+  font-weight: bold;
+}
+
+.link li {
+  margin: 3% auto;
+}
+
+.logo-img {
+  display: inline-block;
+}
+
+.logo-img img {
+  max-width: 120px;
+  max-height: 120px;
+}
+
+.powered-by {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.powered-by a {
+  color: rgb(130,209,249) !important;
+}

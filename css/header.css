@@ -1,3 +1,12 @@
+.header {
+    width: 100%;
+}
+
+#nav {
+    width: 1200px;
+    min-width: 1200px;
+}
+
 .nav-link {
     color: black !important;
     font-weight: bold;
