@@ -129,5 +129,19 @@ function wpmee_post_views($before = '(浏览 ', $after = ' 次)', $echo = 1)
 //保护后台登录
 add_action('login_enqueue_scripts','login_protection');
 function login_protection(){  
-    if($_GET['word'] != 'zqtytzq')header('Location: http://www.baidu.com/');  
+    if($_GET['word'] != 'zqtytzq')header('Location: http://www.luqitong.com/');  
 }
+
+function push_to_baidu_zz($post_id, $post, $update){
+    if($post->post_status != 'publish'){
+        return;
+    }
+    $baidu_zz_api_url   = 'http://data.zz.baidu.com/urls?site=www.luqitong.com&token=9dVDLYiImbALNZDm';
+    $response   = wp_remote_post($baidu_zz_api_url, array(
+        'headers'   => array('Accept-Encoding'=>'','Content-Type'=>'text/plain'),
+        'sslverify' => false,
+        'blocking'  => false,
+        'body'      => get_permalink($post_id)
+    ));
+}
+add_action('save_post', 'push_to_baidu_zz', 10, 3);

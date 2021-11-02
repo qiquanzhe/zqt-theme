@@ -53,7 +53,7 @@
 	</div><!-- .site-info -->
 	<div class="powered-by text-center">
 		<div>
-		Copyright ©山东政商信息科技有限公司版权所有
+		Copyright ©正企通（山东）产业发展集团有限公司
 		</div>
 		<div><a href="http://beian.miit.gov.cn/">备案号：鲁ICP备19054652号-1</a></div>
 		<div>Proudly powered by <a href="<?php bloginfo('url'); ?>">正企通</a></div>
