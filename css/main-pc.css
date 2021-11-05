@@ -73,7 +73,7 @@ var {
 }
 
 .active .nav-link {
-  color: rgb(130,209,249) !important;
+  color: rgb(130, 209, 249) !important;
 }
 
 .main {
@@ -284,32 +284,36 @@ var {
 }
 .news-list .news-title {
   white-space: nowrap;
-text-overflow: ellipsis;
-overflow: hidden;
-display: inline-block;
-vertical-align: middle;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.news-list li a{
+.news-list li a {
   display: inline-block;
   line-height: 45px;
 }
 
-.wp_pagenavi .current{
+.wp-pagenavi .current {
   border: none;
   background-color: rgb(82, 129, 218);
   color: white;
 }
 
+.wp-pagenavi span {
+  display: inline;
+}
+
 /* 联系我们样式 */
 .map-container {
-  width:100%;
+  width: 100%;
   height: 450px;
 }
 
 .contact-infos div {
   font-size: 20px;
-  margin:20px auto;
+  margin: 20px auto;
 }
 
 .contact-infos div i {
@@ -322,7 +326,7 @@ vertical-align: middle;
 /* 关于我们样式 */
 
 .box-header {
-  border-bottom: 1px solid rgba(185, 181, 181, .4);
+  border-bottom: 1px solid rgba(185, 181, 181, 0.4);
   height: 40px;
 }
 
@@ -403,27 +407,27 @@ vertical-align: middle;
 }
 
 .article-info span {
-    color: rgb(131, 131, 131);
-    font-size: 0.9rem;
+  color: rgb(131, 131, 131);
+  font-size: 0.9rem;
 }
 
 .article-content .content {
-    font-size: 16px;
-    line-height: 2em;
-    color:rgb(105, 105, 105)
+  font-size: 16px;
+  line-height: 2em;
+  color: rgb(105, 105, 105);
 }
 
 .article-content .content p {
-    text-indent: 2em;
+  text-indent: 2em;
 }
 
-.article-content .content>p:first-child {
-    text-indent: 0 !important;
+.article-content .content > p:first-child {
+  text-indent: 0 !important;
 }
 
 .content img {
-	max-width: 100%;
-	height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .article-content a {
@@ -441,7 +445,8 @@ vertical-align: middle;
   text-align: center;
 }
 
-.link-title, .site-logo {
+.link-title,
+.site-logo {
   font-weight: bold;
 }
 
@@ -464,5 +469,5 @@ vertical-align: middle;
 }
 
 .powered-by a {
-  color: rgb(130,209,249) !important;
+  color: rgb(130, 209, 249) !important;
 }
