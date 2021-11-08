@@ -10,7 +10,7 @@ get_header() ?>
 	<div class="banner">
 		<img class="img-fluid" src="<?php bloginfo('template_url'); ?>/img/banner-background.png" alt="banner">
 		<div class="slogan">
-			<h1 class="display-1">让企业没有难申报的政策！</h1>
+			<!-- <h1 class="display-1">让企业没有难申报的政策！</h1> -->
 			<hr size="10px" width="20%" noshade=true />
 		</div>
 	</div>
