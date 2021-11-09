@@ -64,6 +64,11 @@ var {
   width: 100%;
 }
 
+.navbar-brand img {
+  width: 60%;
+  margin-left:20%
+}
+
 .nav-link {
   color: black !important;
   font-weight: bold;
@@ -94,14 +99,15 @@ var {
 .slogan h1 {
   font-weight: bolder !important;
   -webkit-text-stroke: 1px steelblue;
-  font-size: 1.8rem !important;
+  font-size: 1.0rem !important;
 }
 
 .slogan {
   color: white;
   position: absolute;
-  left: 8%;
-  top: 30%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .slogan hr {
