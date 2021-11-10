@@ -80,6 +80,10 @@ var {
   text-align: center;
 }
 
+.logo img {
+  margin: 5%;
+}
+
 /* 首页样式 */
 .banner {
   position: relative;
