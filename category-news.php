@@ -62,7 +62,7 @@ get_header(); ?>
                             }
                             wp_reset_query();
 
-                            $query_post_args = array (
+                            $query_post_args_new = array (
                                 'showposts' => $limit = 20,
                                 'cat' => $cat,
                                 "paged" => $paged,
@@ -70,7 +70,7 @@ get_header(); ?>
                                 'ignore_sticky_posts' => 1,
                                 'order' => 'DESC'
                             );
-                            query_posts($query_post_args);
+                            query_posts($query_post_args_new);
                             ?>
                                 <ul class="news-list">
                                     <?php
