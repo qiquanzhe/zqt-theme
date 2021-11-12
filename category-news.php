@@ -64,7 +64,7 @@ get_header(); ?>
                     <?php
                         $post_num++;
                     }
-                    wp_reset_query();
+                    // wp_reset_query();
 
                     $query_post_args_new = array(
                         'showposts' => $limit = (20 - $post_num),
