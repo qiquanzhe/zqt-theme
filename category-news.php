@@ -47,12 +47,13 @@ get_header(); ?>
                     "paged" => $paged
                 );
                 static $post_num = 0;
-                query_posts($query_post_args);
+                // query_posts($query_post_args);
+                $var_sticky_posts = new WP_Query($query_post_args);
                 ?>
                 <ul class="news-list my-md-4">
                     <?php
-                    while (have_posts()) {
-                        the_post();
+                    while ($var_sticky_posts->have_posts()) {
+                        $var_sticky_posts->the_post();
                     ?>
                         <li class="row">
                             <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="col-md-10">
@@ -64,7 +65,7 @@ get_header(); ?>
                     <?php
                         $post_num++;
                     }
-                    // wp_reset_query();
+                    wp_reset_query();
 
                     $query_post_args_new = array(
                         'showposts' => $limit = (20 - $post_num),
@@ -74,12 +75,13 @@ get_header(); ?>
                         'ignore_sticky_posts' => 1,
                         'order' => 'DESC'
                     );
-                    query_posts($query_post_args_new);
+                    // query_posts($query_post_args_new);
+                    $var_posts = new WP_Query($query_post_args_new);
                     ?>
                     <ul class="news-list">
                         <?php
-                        while (have_posts()) {
-                            the_post();
+                        while ($var_posts->have_posts()) {
+                            $var_posts->the_post();
                         ?>
                             <li class="row">
                                 <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="col-md-10">
