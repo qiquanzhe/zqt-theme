@@ -277,6 +277,13 @@ var {
   height: 45px;
 }
 
+.news-list li a {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 .news-list span {
   display: inline-block;
   text-align: right;
