@@ -114,7 +114,7 @@ get_header() ?>
 		<img class="img-fluid" src="<?php bloginfo('template_url'); ?>/img/back-3.png" alt="footer-banner">
 		<div class="footer-slogan">
 			<h1>我们致力于为企业</h1>
-			<h1>提供专业并兼具财税特色的一体化科技管理咨询服务</h1>
+			<h1>提供精准化、全链条的专业科技创新创业服务</h1>
 		</div>
 	</div>
 

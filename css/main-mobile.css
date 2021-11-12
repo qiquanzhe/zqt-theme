@@ -55,7 +55,6 @@ var {
 }
 
 /* 页眉样式 */
-
 .header {
   width: 100%;
 }
@@ -166,13 +165,13 @@ var {
 .footer-slogan {
   color: white;
   position: absolute;
-  left: 3%;
-  top: 40%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .footer-slogan h1 {
   font-weight: bold !important;
-  /* -webkit-text-stroke: 1px steelblue; */
   margin-bottom: 2%;
   font-size:medium;
 }
@@ -193,13 +192,7 @@ var {
   vertical-align: middle;
 }
 
-@media screen and (min-width: 1600px) {
-  .slogan h1 {
-    font-weight: bold !important;
-    -webkit-text-stroke: 1px steelblue;
-    font-size: 4rem !important;
-  }
-}
+
 
 /* 业务范围样式 */
 .cat-title {
@@ -454,6 +447,7 @@ vertical-align: middle;
 .site-info {
   background-color: rgb(244, 244, 244);
   width: 100%;
+  margin: auto 0;
 }
 
 .links h5 {
@@ -461,8 +455,16 @@ vertical-align: middle;
   text-align: center;
 }
 
+.links h5 a {
+  color: rgb(130,209,249) !important;
+}
+
 .link-title, .site-logo {
   font-weight: bold;
+}
+
+.address {
+  margin-bottom: 2%;
 }
 
 .link li {
@@ -480,7 +482,7 @@ vertical-align: middle;
 
 .powered-by {
   margin-top: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .powered-by a {

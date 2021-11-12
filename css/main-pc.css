@@ -467,6 +467,10 @@ var {
   max-height: 120px;
 }
 
+.address {
+  margin-bottom: 1%;
+}
+
 .powered-by {
   margin-top: 20px;
   margin-bottom: 60px;

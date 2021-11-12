@@ -13,10 +13,10 @@
 
 <footer id="footer" class="site-footer">
 	<div class="site-info mx-md-0 row">
-		<div class="links col-md-8 col-12 m-auto row py-5">
+		<div class="links col-md-8 col-12 m-auto row py-md-5 py-2">
 			<div class="col-md-3 col-6">
 				<h5>政府链接</h5>
-				<ul class="link list-unstyled text-center my-4">
+				<ul class="link list-unstyled text-center my-md-4 my-2">
 					<li><a href="https://www.miit.gov.cn/">工业和信息化部</a></li>
 					<li><a href="http://www.chinatorch.gov.cn/">科技部火炬中心</a></li>
 					<li><a href="http://gxt.shandong.gov.cn/">山东省工业和信息化厅</a></li>
@@ -27,7 +27,7 @@
 			</div>
 			<div class="col-md-3 col-6">
 				<h5>友情链接</h5>
-				<ul class="link list-unstyled text-center my-4">
+				<ul class="link list-unstyled text-center my-md-4 my-2">
 					<li><a href="http://www.51cqc.com" target="_blank">宁夏ISO质量体系认证</a></li>
 					<li><a href="http://www.nxzlcw.com" target="_blank">银川商标注册</a></li>
 					<li><a href="https://www.mustip.com" target="_blank">知识产权申请</a></li>
@@ -38,8 +38,10 @@
 					<h5>网站地图 | 
 						<a href="<?php bloginfo('url'); ?>/about">关于我们</a> </h5>
 				</div>
-				<div class="text-center my-4">
-					<div class="address">地址：济南市槐荫区经十路22799号和谐广场2号楼2105室</div>
+				<div class="text-center my-md-4 my-2">
+					<div class="address">济南市槐荫区经十路22799号和谐广场2号楼2105室</div>
+					<div class="address">济南市章丘区双山街道绣水如意达尔文区G座1355室</div>
+					<div class="address">济南市莱芜区花园北路六十九号济南市诚信建设促进会三楼</div>
 					<div class="tel">联系电话：13335155205</div>
 				</div>
 				<div class="site-logo my-1 row">
