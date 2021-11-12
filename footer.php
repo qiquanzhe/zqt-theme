@@ -14,7 +14,7 @@
 <footer id="footer" class="site-footer">
 	<div class="site-info mx-md-0 row">
 		<div class="links col-md-8 col-12 m-auto row py-md-5 py-2">
-			<div class="col-md-3 col-6">
+			<div class="gov-link col-md-3 col-6">
 				<h5>政府链接</h5>
 				<ul class="link list-unstyled text-center my-md-4 my-2">
 					<li><a href="https://www.miit.gov.cn/">工业和信息化部</a></li>
@@ -25,7 +25,7 @@
 					<li><a href="http://jnsti.jinan.gov.cn/">济南市科学技术局</a></li>
 				</ul>
 			</div>
-			<div class="col-md-3 col-6">
+			<div class="fri-link col-md-3 col-6">
 				<h5>友情链接</h5>
 				<ul class="link list-unstyled text-center my-md-4 my-2">
 					<li><a href="http://www.51cqc.com" target="_blank">宁夏ISO质量体系认证</a></li>

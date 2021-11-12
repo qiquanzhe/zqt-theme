@@ -450,6 +450,10 @@ vertical-align: middle;
   margin: auto 0;
 }
 
+.fri-link, .gov-link {
+  display: none;
+}
+
 .links h5 {
   font-weight: bold;
   text-align: center;
