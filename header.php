@@ -20,8 +20,8 @@
 	<!-- https://bootswatch.com/superhero/ -->
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style.css" />
-	<link rel="stylesheet" media="screen and (max-width:600px)" href="<?php bloginfo('template_url'); ?>/css/main-mobile.css" />
-	<link rel="stylesheet" media="screen and (min-width:600px) and (max-width:1200px)" href="<?php bloginfo('template_url'); ?>/css/main-pad.css" />
+	<link rel="stylesheet" media="screen and (max-width:576px)" href="<?php bloginfo('template_url'); ?>/css/main-mobile.css" />
+	<link rel="stylesheet" media="screen and (min-width:576px) and (max-width:1200px)" href="<?php bloginfo('template_url'); ?>/css/main-pad.css" />
 	<link rel="stylesheet" media="screen and (min-width:1200px)" href="<?php bloginfo('template_url'); ?>/css/main-pc.css" />
 	<!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
