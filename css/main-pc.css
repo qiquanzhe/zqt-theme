@@ -148,14 +148,6 @@ var {
   text-align: left;
 }
 
-.footer-slogan {
-  color: white;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .footer-slogan h1 {
   font-weight: bold !important;
   /* -webkit-text-stroke: 1px steelblue; */
